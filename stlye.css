@@ -21,14 +21,21 @@ header{
     background-color: rgba(255, 255, 255, .8);
     height: 100px;
 }
-.btn{
-background-color: blueviolet;
-color: white;
-}
+
 .card{
     height: 480px;
+    
 }
 .btn:hover{
-    background-color: darkmagenta;
-    color: white;
+    background-color: darkmagenta !important;
+}
+button{
+    background-color:blueviolet !important;
+        
+    color: white !important;
+}
+nav>button{
+
+    font-size: 30px !important;
+    width: 60px;
 }

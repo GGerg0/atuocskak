@@ -1,3 +1,7 @@
+const newCarBtn = document.getElementById("newCarBtn")
+
+function fetching()
+{
 fetch("https://surveys-5jvt.onrender.com/api/cars/")
   .then((response) => {
     if (!response.ok) {
@@ -15,16 +19,24 @@ fetch("https://surveys-5jvt.onrender.com/api/cars/")
   .catch((error) => {
     console.error("There was a problem with the fetch operation:", error);
   });
+}
+
+
 
 function display(kocsi) {
   const conatiner = document.getElementById("cars");
 
-  conatiner.innerHTML += `<div class="card col-lg-3 col-md-6 col-sm-12 m-2 " onclick="more(this)" id="${kocsi.id}">
-        <img src="twilight.jpg" alt="Twilight Sparkle" class="card.img-top img-fluid"/>
-        <div class="card-body">
-          <h3>${kocsi.model}</h3>
+  conatiner.innerHTML += `<div class="col-lg-3 col-md-6 col-sm-12 m-2 text-center">
+    <div class="card my-2" onclick="more(this)" id="${kocsi.id}">
+          <img src="twilight.jpg" alt="Twilight Sparkle" class="card.img-top img-fluid"/>
+          <div class="card-body">
+            <h3>${kocsi.model}</h3>
+          </div>
+    
         </div>
-      </div>`;
+        <button class="btn btn-block">&#9998;</button>
+  </div>`;
+      
 }
 
 function more(card) {
@@ -54,12 +66,19 @@ function more(card) {
   }
 }
 
-
 function openWindow(){
-    window.open("newcar.html","_blank","width=500,height=800")
+    newCArWindow = window.open("newcar.html","_blank","width=500,height=800")
 }
 
 function closeWindow()
 {
-    window.close()
+
+    document.
+    window.open("main.html")
+}
+
+function reload()
+{
+  document.getElementById("cars").innerHTML= ""
+  fetching()
 }
