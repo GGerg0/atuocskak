@@ -8,16 +8,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="stlye.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Kocsikák</title>
   </head>
   <body>
     <header>
-      <h1>Pacik</h1>
-      
+      <h1>Kicsikocsi hozzáadás</h1>
     </header>
-    <nav><button onclick="closeWindow()" class="btn">&#10004;</button></nav>
-    <div class="container" >
-      <div class="row" id="container"></div>
+      <div class="container text-center">
+        <label for="model">Modell: </label> <input id="model" type="text"><br>
+        <label for="brand">Márka: </label> <input id="brand" type="text"><br>
+        <label for="year">Gyártási év: </label> <input id="year" type="number" min="1884" max="2026" placeholder="2020"><br>
+      </div>
+      <nav class="text-center my-5"><button onclick="closeWindow()" class="btn"><i class="bi bi-check2"></i></button></nav>
       <script src="script.js"></script>
     </div>
   </body>
