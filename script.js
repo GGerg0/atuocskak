@@ -1,6 +1,3 @@
-let highlight = false;
-let selectedCard = null;
-
 fetch("https://surveys-5jvt.onrender.com/api/cars/")
   .then((response) => {
     if (!response.ok) {
@@ -41,8 +38,6 @@ function more(card) {
         return response.json();
       })
       .then((kocsi) => {
-        
-        highlight = true;
         card.innerHTML += `<ul>
             <li>${kocsi.id}</li>
             <li>${kocsi.brand}</li>
@@ -56,7 +51,6 @@ function more(card) {
   else
   {
     card.removeChild(card.lastChild)
-    highlight = false
   }
 }
 
