@@ -1,0 +1,42 @@
+
+body{
+    font-family: cursive;
+    background-image: url(bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgb(130, 166, 138);
+}
+h1{
+    letter-spacing: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+header{
+    padding: 10px !important;
+    background-color: rgba(255, 255, 255, .8);
+    text-align: center;
+
+    z-index: 5;
+}
+
+.btn:hover{
+    background-color: darkmagenta !important;
+}
+button{
+    background-color:blueviolet !important;
+    color: white !important;
+}
+header>button{
+
+    font-size: 30px !important;
+    width: 60px;
+}
+header+div{
+    background-color: white;
+    width: 60vw !important;
+    
+}
+input{
+    margin-top: 10px;
+}

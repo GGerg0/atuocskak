@@ -26,7 +26,7 @@ function display(kocsi) {
   conatiner.innerHTML += `
   <div class="col-lg-3 col-md-6 col-sm-12 m-2 text-center" id="${kocsi.id}">
     <div class="card my-2 text-start p-2" onclick="more(this)" >
-          <img src="twilight.jpg" alt="Twilight Sparkle" class="card.img-top img-fluid"/>
+          <div><img src="twilight_tp.png" alt="Twilight Sparkle" class="card.img-top img-fluid"/></div>
           <div class="card-body">
             <h3>${kocsi.model}</h3>
           </div>
@@ -139,7 +139,7 @@ function edit(b) {
     })
     .then((c) => {
       b.parentNode.innerHTML = `<div class="card my-2 text-start p-2">
-    <img src="twilight.jpg" alt="Twilight Sparkle" class="card.img-top img-fluid"/>
+    <img src="twilight_tp.png" alt="Twilight Sparkle" class="card.img-top img-fluid"/>
           <label for="model">Modell: </label> <input id="model" type="text" value="${c.model}"><br>
         <label for="brand">Márka: </label> <input id="brand" type="text" value="${c.brand}"><br>
         <label for="year">Gyártási év: </label> <input id="year" type="number" value="${c.year}" min="1884" max="2027" placeholder="2020"><br>
